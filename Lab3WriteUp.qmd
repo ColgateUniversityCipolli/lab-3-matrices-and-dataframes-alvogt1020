@@ -172,7 +172,7 @@ Copy and paste the code for the unit square. Edit the code to draw the segments 
 
 ```{r}
 #| label: fig-part-1e
-#| fig-cap: "The unit square (part 1e)."
+#| fig-cap: "Shape (part 1e)."
 #| fig-width: 3
 #| fig-height: 3
 #| scale: "80%"
@@ -267,7 +267,7 @@ Copy and paste the code for plotting the unit square. Edit the code to draw the 
 
 ```{r}
 #| label: fig-part-2e
-#| fig-cap: "The unit square (part 2e)."
+#| fig-cap: "Shape (part 2e)."
 #| fig-width: 3
 #| fig-height: 3
 #| scale: "80%"
@@ -315,6 +315,51 @@ In both cases, $k \in \mathbb{R}$ is called a shear factor and its sign determin
 Use the following to generate a new shape. Compare the shape and its area to your answer in Question 1.
 $$\mathbf{M}_v = \begin{bmatrix} 1 & k=0.5 \\ 0 & 1 \end{bmatrix} ~~~~~ \textrm{and} ~~~~~
   \mathbf{A}   = \begin{bmatrix} 1 & -7 \\ 5 & 9 \end{bmatrix}$$
+
+
+
+**Solution**
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+k = 0.5
+(M.v = matrix(data=c(1,k,0,1),nrow=2,ncol=2,byrow=TRUE))
+(A = matrix(data=c(1,-7,5,9),nrow=2,ncol=2,byrow=TRUE))
+(T = A %*% M.v)
+
+(basis.vector.1 = T[,1])
+(basis.vector.2 = T[,2])
+
+p.0 = c(0,0)
+p.1 = basis.vector.1
+p.2 = basis.vector.1 + basis.vector.2
+p.3 = basis.vector.2
+```
+
+```{r}
+#| label: fig-part-3a
+#| fig-cap: "Shape (part 3a)."
+#| fig-width: 3
+#| fig-height: 3
+#| scale: "80%"
+#| fig-align: "center"
+#| size: "scriptsize"
+ggplot() +
+  geom_segment(aes(x = p.0[1], xend = p.1[1],
+                   y=p.0[2], yend = p.1[2]))+
+  geom_segment(aes(x = p.1[1], xend = p.2[1],
+                   y=p.1[2], yend = p.2[2]))+
+  geom_segment(aes(x = p.2[1], xend = p.3[1],
+                   y=p.2[2], yend = p.3[2]))+
+  geom_segment(aes(x = p.3[1], xend = p.0[1],
+                   y=p.3[2], yend = p.0[2])) +
+  theme_bw() + 
+  xlim(-1, 4)+
+  ylim(-1, 7)+
+  labs(x = "x", 
+       y = "y")
+```
 
 ## Part b
 Use the following to generate a new shape. Compare the shape and its area to your answer in Questions 1 and the vertical shear transform in part (a).
