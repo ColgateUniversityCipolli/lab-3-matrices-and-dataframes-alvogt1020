@@ -492,17 +492,17 @@ Create a data frame `ladder` with the following data. Note your data frame shoul
 
 | x    | y    | group| x    | y    | group|
 |:-----|:-----|:-----|:-----|:-----|:-----|
-| 0    | 0    |    1 | 1    | 8    |    1 |
-| 0    | 20   |    1 | 0    | 10   |    1 |
-| 1    | 0    |    2 | 1    | 10   |    2 |
-| 1    | 20   |    2 | 0    | 12   |    2 |
-| 0    | 2    |    3 | 1    | 12   |    3 |
-| 1    | 2    |    3 | 0    | 14   |    3 |
-| 0    | 4    |    4 | 1    | 14   |    4 |
-| 1    | 4    |    4 | 0    | 16   |    4 |
-| 0    | 6    |    5 | 1    | 16   |    5 |
-| 1    | 6    |    5 | 0    | 18   |    5 |
-| 0    | 8    |    5 | 1    | 18   |    5 |
+| 0    | 0    |    1 | 1    | 8    |    6 |
+| 0    | 20   |    1 | 0    | 10   |    7 |
+| 1    | 0    |    2 | 1    | 10   |    7 |
+| 1    | 20   |    2 | 0    | 12   |    8 |
+| 0    | 2    |    3 | 1    | 12   |    8 |
+| 1    | 2    |    3 | 0    | 14   |    9 |
+| 0    | 4    |    4 | 1    | 14   |    9 |
+| 1    | 4    |    4 | 0    | 16   |   10 |
+| 0    | 6    |    5 | 1    | 16   |   10 |
+| 1    | 6    |    5 | 0    | 18   |   11 |
+| 0    | 8    |    6 | 1    | 18   |   11 |
 
 ## Part b
 Remove `#|eval: false` in the code below. The result should look like a ladder and a very rectangular house if part a is correct.
