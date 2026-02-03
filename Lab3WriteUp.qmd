@@ -168,6 +168,32 @@ Compute the points $p_0$, $p_1$, $p_2$, and $p_3$.
 ## Part e
 Copy and paste the code for the unit square. Edit the code to draw the segments that form the boundary based on the points in Part d.
 
+**Solution**
+
+```{r}
+#| label: fig-part-e
+#| fig-cap: "The unit square (part e)."
+#| fig-width: 3
+#| fig-height: 3
+#| scale: "80%"
+#| fig-align: "center"
+#| size: "scriptsize"
+ggplot() +
+  geom_segment(aes(x = p.0[1], xend = p.1[1],
+                   y=p.0[2], yend = p.1[2]))+
+  geom_segment(aes(x = p.1[1], xend = p.2[1],
+                   y=p.1[2], yend = p.2[2]))+
+  geom_segment(aes(x = p.2[1], xend = p.3[1],
+                   y=p.2[2], yend = p.3[2]))+
+  geom_segment(aes(x = p.3[1], xend = p.0[1],
+                   y=p.3[2], yend = p.0[2])) +
+  theme_bw() + 
+  xlim(-8, 1)+
+  ylim(-1, 15)+
+  labs(x = "x", 
+       y = "y")
+```
+
 ## Part f
 Interestingly, the determinant of $\mathbf{A}$ gives us the area of the shape plotted in Part e. Find the determinant of $\mathbf{A}$.
 
