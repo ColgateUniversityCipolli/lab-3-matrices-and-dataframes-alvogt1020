@@ -292,6 +292,14 @@ ggplot() +
 ## Part f
 Interestingly, the determinant of $\mathbf{A}$ gives us the area of the shape plotted in Part e. Find the determinant of $\mathbf{A}$.
 
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(det.A = det(A))
+```
+The area of the shape we plotted is 0.
+
 # Question 3
 We can conduct a shear transformation that keeps the area of the shape the same but horizontally or vertically slants the object. 
 
