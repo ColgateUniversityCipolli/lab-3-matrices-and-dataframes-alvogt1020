@@ -361,10 +361,24 @@ ggplot() +
        y = "y")
 ```
 
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(det.A = det(A))
+```
+
+The shape we generate is a parallelogram, very similar to what we generated in part *1e*; however, it is vertically slanted. This is obviously very different from the line segment produced in *2e*. 
+
+The area of the shape generated for *3a* is the same as the area of the shape we generated in *1e*. This is because the shear transformation preserves area.
+
+
+
 ## Part b
 Use the following to generate a new shape. Compare the shape and its area to your answer in Questions 1 and the vertical shear transform in part (a).
 $$ \mathbf{M}_h = \begin{bmatrix} 1 & 0 \\ k=0.5 & 1 \end{bmatrix}~~~~~ \textrm{and} ~~~~~
   \mathbf{A}   = \begin{bmatrix} 1 & -7 \\ 5 & 9 \end{bmatrix}$$
+
+)
 
 ## Part c
 Can we shear vertically and horizontally at the same time? Use the following to generate a new shape. Compare the shape and its area to your answers in parts (a) and (b).
