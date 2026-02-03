@@ -283,8 +283,8 @@ ggplot() +
   geom_segment(aes(x = p.3[1], xend = p.0[1],
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
-  xlim(-1, 4)+
-  ylim(-1, 7)+
+  xlim(-10, 10)+
+  ylim(0, 25)+
   labs(x = "x", 
        y = "y")
 ```
@@ -355,7 +355,7 @@ ggplot() +
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
   xlim(-10, 10)+
-  ylim(0, 20)+
+  ylim(0, 25)+
   labs(x = "x", 
        y = "y")
 ```
@@ -416,7 +416,7 @@ ggplot() +
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
   xlim(-10, 10)+
-  ylim(0, 20)+
+  ylim(0, 25)+
   labs(x = "x", 
        y = "y")
 ```
@@ -426,13 +426,64 @@ ggplot() +
 #| code-fold: FALSE
 (det.A = det(A))
 ```
-The shape generated for *3b* resembles the shape from *1e* but slanted horizontally, retaining the same area. This is what one would expect based on the shear transformation. It begins to take on more of a diamond/kite shape when compared to *1e* and *3a*. Horizontal slants of a parallelogram seem to be more pronounced than vertical slants of the same magnitude.
+The shape generated for *3b* resembles the shape from *1e* but slanted horizontally, retaining the same area. This is what one would expect based on the shear transformation. It begins to take on more of a diamond/kite shape when compared to *1e* and *3a*, though it is still a parallelogram. Horizontal slants of a parallelogram seem to be more pronounced than vertical slants of the same magnitude.
 
 
 ## Part c
 Can we shear vertically and horizontally at the same time? Use the following to generate a new shape. Compare the shape and its area to your answers in parts (a) and (b).
 $$\mathbf{M}_{vh} = \begin{bmatrix} 1 & k=0.5 \\ k=0.5 & 1 \end{bmatrix} ~~~~~ \textrm{and} ~~~~~
   \mathbf{A}   = \begin{bmatrix} 1 & -7 \\ 5 & 9 \end{bmatrix}$$
+
+**Solution**
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+k = 0.5
+(M.v = matrix(data=c(1,k,k,1),nrow=2,ncol=2,byrow=TRUE))
+(A = matrix(data=c(1,-7,5,9),nrow=2,ncol=2,byrow=TRUE))
+T = A %*% M.v
+
+basis.vector.1 = T[,1]
+basis.vector.2 = T[,2]
+
+p.0 = c(0,0)
+p.1 = basis.vector.1
+p.2 = basis.vector.1 + basis.vector.2
+p.3 = basis.vector.2
+```
+
+```{r}
+#| label: fig-part-3c
+#| fig-cap: "Shape (part 3c)."
+#| fig-width: 3
+#| fig-height: 3
+#| scale: "80%"
+#| fig-align: "center"
+#| size: "scriptsize"
+ggplot() +
+  geom_segment(aes(x = p.0[1], xend = p.1[1],
+                   y=p.0[2], yend = p.1[2]))+
+  geom_segment(aes(x = p.1[1], xend = p.2[1],
+                   y=p.1[2], yend = p.2[2]))+
+  geom_segment(aes(x = p.2[1], xend = p.3[1],
+                   y=p.2[2], yend = p.3[2]))+
+  geom_segment(aes(x = p.3[1], xend = p.0[1],
+                   y=p.3[2], yend = p.0[2])) +
+  theme_bw() + 
+  xlim(-10, 10)+
+  ylim(0, 25)+
+  labs(x = "x", 
+       y = "y")
+```
+
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(det.A = det(A))
+```
+
+The area, again, is unsurprisingly the same as *1e* and its subsequent transformations (*3a* and *3b*). This transformation takes on characteristics of both *3a* and *3b*, being the skinniest and longest of the generations.
 
 # Question 4
 
