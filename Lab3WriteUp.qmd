@@ -188,8 +188,8 @@ ggplot() +
   geom_segment(aes(x = p.3[1], xend = p.0[1],
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
-  xlim(-8, 1)+
-  ylim(-1, 15)+
+  xlim(-10, 10)+
+  ylim(0, 20)+
   labs(x = "x", 
        y = "y")
 ```
@@ -317,7 +317,6 @@ $$\mathbf{M}_v = \begin{bmatrix} 1 & k=0.5 \\ 0 & 1 \end{bmatrix} ~~~~~ \textrm{
   \mathbf{A}   = \begin{bmatrix} 1 & -7 \\ 5 & 9 \end{bmatrix}$$
 
 
-
 **Solution**
 
 ```{r}
@@ -355,8 +354,8 @@ ggplot() +
   geom_segment(aes(x = p.3[1], xend = p.0[1],
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
-  xlim(-8, 2)+
-  ylim(-4, 17)+
+  xlim(-10, 10)+
+  ylim(0, 20)+
   labs(x = "x", 
        y = "y")
 ```
@@ -378,7 +377,7 @@ Use the following to generate a new shape. Compare the shape and its area to you
 $$ \mathbf{M}_h = \begin{bmatrix} 1 & 0 \\ k=0.5 & 1 \end{bmatrix}~~~~~ \textrm{and} ~~~~~
   \mathbf{A}   = \begin{bmatrix} 1 & -7 \\ 5 & 9 \end{bmatrix}$$
 
-)
+
 
 ## Part c
 Can we shear vertically and horizontally at the same time? Use the following to generate a new shape. Compare the shape and its area to your answers in parts (a) and (b).
