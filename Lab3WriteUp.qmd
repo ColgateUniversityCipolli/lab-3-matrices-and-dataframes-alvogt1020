@@ -355,8 +355,8 @@ ggplot() +
   geom_segment(aes(x = p.3[1], xend = p.0[1],
                    y=p.3[2], yend = p.0[2])) +
   theme_bw() + 
-  xlim(-1, 4)+
-  ylim(-1, 7)+
+  xlim(-8, 2)+
+  ylim(-4, 17)+
   labs(x = "x", 
        y = "y")
 ```
