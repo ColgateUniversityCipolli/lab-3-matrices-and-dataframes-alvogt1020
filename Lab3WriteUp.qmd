@@ -197,12 +197,29 @@ ggplot() +
 ## Part f
 Interestingly, the determinant of $\mathbf{A}$ gives us the area of the shape plotted in Part e. Find the determinant of $\mathbf{A}$.
 
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(det.A = det(A))
+```
+The area of the shape we plotted is 44.
+
 # Question 2
 Recomplete Question 1 using a new matrix for $\mathbf{A}$. This matrix is not as well behaved.
 
 ## Part a
 Create the matrix `A` in `R`.
 $$\mathbf{A} = \begin{bmatrix} 1 & 2 \\ 2 & 4 \end{bmatrix}$$
+
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+ 
+(A = matrix(data=c(1,2,2,4), nrow=2, ncol=2, byrow=TRUE))
+```
+
 
 ## Part b
 Compute the product below in `R` and store it in an object `T`.
