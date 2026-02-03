@@ -250,6 +250,16 @@ Create `basis.vector.1` (first column of `T`) and `basis.vector.2` (second colum
 ## Part d
 Compute the points $p_0$, $p_1$, $p_2$, and $p_3$.
 
+**Solution**
+```{r}
+#| size: "scriptsize"
+#| code-fold: FALSE
+(p.0 = c(0,0))
+(p.1 = basis.vector.1)
+(p.2 = basis.vector.1 + basis.vector.2)
+(p.3 = basis.vector.2)
+```
+
 ## Part e
 Copy and paste the code for plotting the unit square. Edit the code to draw the segments that form the boundary based on the points in Part d.
 
